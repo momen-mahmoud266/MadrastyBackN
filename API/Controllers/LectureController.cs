@@ -7,11 +7,11 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartmentsController : ControllerBase
+    public class LectureController : Controller
     {
-        private readonly IDepartmanetService _service;
+        private readonly ILectureService _service;
 
-        public DepartmentsController(IDepartmanetService service)
+        public LectureController(ILectureService service)
         {
             _service = service;
         }
@@ -29,9 +29,9 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] DepartmentViewModel model)
+        public async Task<IActionResult> Post([FromBody] LectureViewModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 return Ok(await _service.Save(model));
             }
@@ -39,7 +39,7 @@ namespace API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put([FromBody] DepartmentViewModel model)
+        public async Task<IActionResult> Put([FromBody] LectureViewModel model)
         {
             if (ModelState.IsValid)
             {

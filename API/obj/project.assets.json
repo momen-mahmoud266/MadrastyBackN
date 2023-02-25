@@ -2735,19 +2735,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hozaifa Khater\\.nuget\\packages\\": {}
+    "C:\\Users\\ali\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\API\\API.csproj",
+      "projectUniqueName": "G:\\New folder\\New Structure\\MadrastyBackN\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Hozaifa Khater\\.nuget\\packages\\",
-      "outputPath": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\API\\obj\\",
+      "projectPath": "G:\\New folder\\New Structure\\MadrastyBackN\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\ali\\.nuget\\packages\\",
+      "outputPath": "G:\\New folder\\New Structure\\MadrastyBackN\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hozaifa Khater\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2761,8 +2761,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Madrasty\\NewStructure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj"
+            "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj"
             }
           }
         }
