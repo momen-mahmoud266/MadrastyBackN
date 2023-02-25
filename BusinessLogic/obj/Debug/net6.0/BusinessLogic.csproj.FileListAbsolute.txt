@@ -1,0 +1,12 @@
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
+D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll

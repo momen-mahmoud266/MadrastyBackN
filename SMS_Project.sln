@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MadrastyAPI", "MadrastyAPI\MadrastyAPI.csproj", "{D635CBAF-1859-42DC-994E-B8BDB7522647}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{F477C5AD-0D8B-4591-901E-457D5BB518ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{24E73ED9-0E4E-497C-8297-500D5DBA4479}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D635CBAF-1859-42DC-994E-B8BDB7522647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D635CBAF-1859-42DC-994E-B8BDB7522647}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D635CBAF-1859-42DC-994E-B8BDB7522647}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D635CBAF-1859-42DC-994E-B8BDB7522647}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F477C5AD-0D8B-4591-901E-457D5BB518ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F477C5AD-0D8B-4591-901E-457D5BB518ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F477C5AD-0D8B-4591-901E-457D5BB518ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F477C5AD-0D8B-4591-901E-457D5BB518ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E73ED9-0E4E-497C-8297-500D5DBA4479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E73ED9-0E4E-497C-8297-500D5DBA4479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E73ED9-0E4E-497C-8297-500D5DBA4479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E73ED9-0E4E-497C-8297-500D5DBA4479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

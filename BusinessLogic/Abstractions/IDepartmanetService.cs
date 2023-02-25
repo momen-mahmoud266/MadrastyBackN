@@ -10,6 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IDepartmanetService
     {
-        Task<ServiceResponse> SaveDepartment(Department department);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int departmentId);
+        Task<ServiceResponse> Delete(int departmentId);
+        Task<ServiceResponse> Save(DepartmentViewModel department);
+        Task<ServiceResponse> Update(DepartmentViewModel department);
     }
 }

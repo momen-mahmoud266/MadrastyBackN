@@ -64,46 +64,13 @@ namespace BusinessLogic.Contexts
         public async Task<DALResponse> ExecuteQuery(string storedProcedureName, Dictionary<string, string>? pars = null)
         {
             SqlConnection cnn;
-            string connetionString = _configuration.GetConnectionString("madrasty_context");
+            string connetionString = _configuration.GetConnectionString("default");
 
             cnn = new SqlConnection(connetionString);
             SqlDataReader reader;
             var data = new DataTable();
-           // string userConnectionString = "";
-
             try
             {
-                // todo get user connection string from database
-
-
-
-                //using  var getConnectionCommand = new SqlCommand("GetUserConnection", cnn)
-                //{
-                //    CommandType = CommandType.StoredProcedure
-                //};
-
-                //cnn.Open();
-                //reader = await getConnectionCommand.ExecuteReaderAsync();
-                //data.Load(reader);
-                //cnn.Close();
-
-                //if (data.Rows.Count > 0 && data.Rows[0][0] != null)
-                //{
-                //    userConnectionString = data.Rows[0][0]!.ToString();
-                //}
-                //else
-                //{
-                //    return new DALResponse(data.Rows[0]["MSG_D_Txt1"]!.ToString());
-                //}
-
-                //if (string.IsNullOrEmpty(userConnectionString))
-                //    return new DALResponse("No Connection String");
-
-
-                //cnn = new SqlConnection(userConnectionString);
-                //reader = null;
-                //data = new DataTable();
-
                 using  var command = new SqlCommand(storedProcedureName, cnn)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -121,16 +88,6 @@ namespace BusinessLogic.Contexts
                 reader = await command.ExecuteReaderAsync();
                 data.Load(reader);
                 cnn.Close();
-
-                if(data.Rows.Count > 0)
-                {
-                    DataColumnCollection columns = data.Columns;
-                    if (columns.Contains("IsError") && columns["IsError"]?.ToString() == "1")
-                    {
-                        return new DALResponse(data.Rows[0]["MSG_D_Txt1"]!.ToString());
-                    }
-                }
-                
                 return new DALResponse(data);
             }
             catch (Exception ex)
@@ -144,7 +101,7 @@ namespace BusinessLogic.Contexts
         {
             SqlConnection cnn;
 
-            string connetionString = _configuration.GetConnectionString("madrasty_context");
+            string connetionString = _configuration.GetConnectionString("default");
 
             cnn = new SqlConnection(connetionString);
             SqlDataReader reader;
@@ -167,21 +124,10 @@ namespace BusinessLogic.Contexts
                     });
                 }
 
-                //command.Parameters.Add(pars);
-
                 cnn.Open();
                 reader = await command.ExecuteReaderAsync();
                 data.Load(reader);
                 cnn.Close();
-
-                if (data.Rows.Count > 0)
-                {
-                    DataColumnCollection columns = data.Columns;
-                    if (columns.Contains("IsError") && columns["IsError"]?.ToString() == "1")
-                    {
-                        return new DALResponse(data.Rows[0]["MSG_D_Txt1"]!.ToString());
-                    }
-                }
 
                 return new DALResponse(data);
             }
