@@ -2504,19 +2504,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hozaifa Khater\\.nuget\\packages\\": {}
+    "C:\\Users\\ali\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "BusinessLogic",
-      "projectPath": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\Hozaifa Khater\\.nuget\\packages\\",
-      "outputPath": "D:\\Madrasty\\NewStructure\\MadrastyBackN\\BusinessLogic\\obj\\",
+      "projectPath": "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\ali\\.nuget\\packages\\",
+      "outputPath": "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hozaifa Khater\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
