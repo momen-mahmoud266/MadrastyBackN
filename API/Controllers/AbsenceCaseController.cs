@@ -1,17 +1,18 @@
 ﻿using BusinessLogic.Abstractions;
 using BusinessLogic.Responses;
 using BusinessLogic.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartmentsController : ControllerBase
+    public class AbsenceCaseController : ControllerBase
     {
-        private readonly IDepartmanetService _service;
+        private readonly IAbsenseCaseService _service;
 
-        public DepartmentsController(IDepartmanetService service)
+        public AbsenceCaseController(IAbsenseCaseService service)
         {
             _service = service;
         }
@@ -29,9 +30,9 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] DepartmentViewModel model)
+        public async Task<IActionResult> Post([FromBody] AbsenceCaseViewModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 return Ok(await _service.Save(model));
             }
@@ -39,7 +40,7 @@ namespace API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put([FromBody] DepartmentViewModel model)
+        public async Task<IActionResult> Put([FromBody] AbsenceCaseViewModel model)
         {
             if (ModelState.IsValid)
             {
