@@ -1,0 +1,4 @@
+
+*.vsidx
+*.cache
+API/obj/Debug/net6.0/API.assets.cache
