@@ -13,6 +13,6 @@ namespace BusinessLogic.ViewModels
         public string OtherSituations { get; set; } = string.Empty;
         public string Date { get; set; } = string.Empty;
         public string EffortResults { get; set; } = string.Empty;
-        public string EndYearState { get; set; }
+        public string EndYearState { get; set; } = string.Empty;
     }
 }

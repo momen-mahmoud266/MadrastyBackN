@@ -46,29 +46,18 @@ namespace BusinessLogic.Implementations
 
         public async Task<ServiceResponse> Save(AbsenceViewModel absence)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceLevel), Value = absence.AbsenceLevel });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceClass), Value = absence.AbsenceClass });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceDate), Value = absence.AbsenceDate });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceStudentId), Value = absence.AbsenceStudentId });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceStudentName), Value = absence.AbsenceStudentName });
-           
-            var result = await _db.ExecuteNonQuery("SaveAbsence", param);
-            return new ServiceResponse(result);
+            var dalResponse = await _db.ExecuteNonQuery("SaveAbsence",
+               _db.CreateListOfSqlParams(absence, new List<string>() { "AbsenceId" }));
+
+            return new ServiceResponse(dalResponse);
         }
 
         public async Task<ServiceResponse> Update(AbsenceViewModel absence)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceId), Value = absence.AbsenceId });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceLevel), Value = absence.AbsenceLevel });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceClass), Value = absence.AbsenceClass });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceDate), Value = absence.AbsenceDate });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceStudentId), Value = absence.AbsenceStudentId });
-            param.Add(new SqlParameter { ParameterName = nameof(absence.AbsenceStudentName), Value = absence.AbsenceStudentName });
+            var dalResponse = await _db.ExecuteNonQuery("UpdateAbsence",
+               _db.CreateListOfSqlParams(absence, new List<string>()));
 
-            var result = await _db.ExecuteNonQuery("UpdateAbsence", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
     }
 }

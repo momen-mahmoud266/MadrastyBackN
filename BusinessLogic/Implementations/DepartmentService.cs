@@ -48,29 +48,18 @@ namespace BusinessLogic.Implementations
 
         public async Task<ServiceResponse> Save(DepartmentViewModel department)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentName), Value = department.DepartmentName });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentDesc), Value = department.DepartmentDesc });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentSupervisorId), Value = department.DepartmentSupervisorId });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentSupervisorName), Value = department.DepartmentSupervisorName });
-            param.Add(new SqlParameter { ParameterName = nameof(department.ParentId), Value = department.ParentId });
+            var dalResponse = await _db.ExecuteNonQuery("SaveDepartment",
+               _db.CreateListOfSqlParams(department, new List<string>() { "DepartmentId" }));
 
-            var result = await _db.ExecuteNonQuery("SaveDepartment", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
 
         public async Task<ServiceResponse> Update(DepartmentViewModel department)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentId), Value = department.DepartmentId });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentName), Value = department.DepartmentName });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentDesc), Value = department.DepartmentDesc });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentSupervisorId), Value = department.DepartmentSupervisorId });
-            param.Add(new SqlParameter { ParameterName = nameof(department.DepartmentSupervisorName), Value = department.DepartmentSupervisorName });
-            param.Add(new SqlParameter { ParameterName = nameof(department.ParentId), Value = department.ParentId });
+             var dalResponse = await _db.ExecuteNonQuery("UpdateDepartment",
+                _db.CreateListOfSqlParams(department, new List<string>()));
 
-            var result = await _db.ExecuteNonQuery("UpdateDepartment", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
     }
 }

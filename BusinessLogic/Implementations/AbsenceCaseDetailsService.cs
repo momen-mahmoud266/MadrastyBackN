@@ -46,29 +46,18 @@ namespace BusinessLogic.Implementations
 
         public async Task<ServiceResponse> Save(AbsenceCaseDetailsViewModel absenceCaseDetails)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.AbsenceCaseId), Value = absenceCaseDetails.AbsenceCaseId });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.OtherSituations), Value = absenceCaseDetails.OtherSituations });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.Date), Value = absenceCaseDetails.Date });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.EffortResults), Value = absenceCaseDetails.EffortResults });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.EndYearState), Value = absenceCaseDetails.EndYearState });
+            var dalResponse = await _db.ExecuteNonQuery("SaveAbsenceCaseDetails",
+                _db.CreateListOfSqlParams(absenceCaseDetails, new List<string>() { "AbsenceCaseDetailsId" }));
 
-            var result = await _db.ExecuteNonQuery("SaveAbsenceCaseDetails", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
 
         public async Task<ServiceResponse> Update(AbsenceCaseDetailsViewModel absenceCaseDetails)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.AbsenceCaseDetailsId), Value = absenceCaseDetails.AbsenceCaseDetailsId });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.AbsenceCaseId), Value = absenceCaseDetails.AbsenceCaseId });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.OtherSituations), Value = absenceCaseDetails.OtherSituations });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.Date), Value = absenceCaseDetails.Date });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.EffortResults), Value = absenceCaseDetails.EffortResults });
-            param.Add(new SqlParameter { ParameterName = nameof(absenceCaseDetails.EndYearState), Value = absenceCaseDetails.EndYearState });
+            var dalResponse = await _db.ExecuteNonQuery("UpdateAbsenceCaseDetails",
+                _db.CreateListOfSqlParams(absenceCaseDetails, new List<string>()));
 
-            var result = await _db.ExecuteNonQuery("UpdateAbsenceCaseDetails", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
     }
 }
