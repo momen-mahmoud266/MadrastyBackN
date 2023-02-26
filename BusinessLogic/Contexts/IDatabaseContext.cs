@@ -10,6 +10,6 @@ namespace BusinessLogic.Contexts
         DataTable CreateDataTable<T>(List<T> list);
 
         Task<DALResponse> ExecuteNonQuery(string storedProcedureName, List<SqlParameter> pars);
-        List<SqlParameter> CreateListOfSqlParams<T>(T Model, string functionType, string id_name);
+        List<SqlParameter> CreateListOfSqlParams<T>(T Model, List<string> excludedProps);
     }
 }

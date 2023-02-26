@@ -1,12 +1,8 @@
-﻿using  BusinessLogic.Responses;
-using  BusinessLogic.ViewModels;
-using  Microsoft.Extensions.Configuration;
-using  System;
-using  System.Collections;
-using  System.Collections.Generic;
-using  System.Data;
-using  System.Data.SqlClient;
-using  System.Reflection;
+﻿using BusinessLogic.Responses;
+using Microsoft.Extensions.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Reflection;
 
 namespace BusinessLogic.Contexts
 {
@@ -18,8 +14,7 @@ namespace BusinessLogic.Contexts
         {
             _configuration = configuration;
         }
-       
-        public List<SqlParameter> CreateListOfSqlParams<T>(T Model, string functionType, string id_name)
+        public List<SqlParameter> CreateListOfSqlParams<T>(T Model, List<string> excludedProps)
         {
             List<SqlParameter> list = new List<SqlParameter>();
 
@@ -27,18 +22,15 @@ namespace BusinessLogic.Contexts
             {
                 var data = new SqlParameter { ParameterName = info.Name, Value = info.GetValue(Model, null) };
 
-                if (data.ParameterName.Equals(id_name) && functionType.Equals("add"))
-                {
+                if (excludedProps.Contains(data.ParameterName))
                     continue;
-                }
                 else
-                {
                     list.Add(data);
-                }
             }
 
             return list;
         }
+
         public DataTable CreateDataTable<T>(List<T> list)
         {
             DataTable dt = new DataTable();

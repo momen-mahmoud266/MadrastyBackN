@@ -46,25 +46,18 @@ namespace BusinessLogic.Implementations
 
         public async Task<ServiceResponse> Save(LectureViewModel lecture)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.StartTime), Value = lecture.StartTime });
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.EndTime), Value = lecture.EndTime });
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.Duration), Value = lecture.Duration });
+            var dalResponse = await _db.ExecuteNonQuery("SaveLecture",
+               _db.CreateListOfSqlParams(lecture, new List<string>() { "LectureId" }));
 
-            var result = await _db.ExecuteNonQuery("SaveLecture", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
 
         public async Task<ServiceResponse> Update(LectureViewModel lecture)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.LectureId), Value = lecture.LectureId });
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.StartTime), Value = lecture.StartTime });
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.EndTime), Value = lecture.EndTime });
-            param.Add(new SqlParameter { ParameterName = nameof(lecture.Duration), Value = lecture.Duration });
+            var dalResponse = await _db.ExecuteNonQuery("UpdateLecture",
+                _db.CreateListOfSqlParams(lecture, new List<string>()));
 
-            var result = await _db.ExecuteNonQuery("UpdateLecture", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
     }
 }

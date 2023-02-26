@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Contexts;
+﻿using BusinessLogic.Abstractions;
+using BusinessLogic.Contexts;
 using BusinessLogic.Responses;
 using BusinessLogic.ViewModels;
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Implementations
 {
-    public class ActivityService
+    public class ActivityService : IActivityService
     {
         private readonly IDatabaseContext _db;
 
@@ -46,37 +47,18 @@ namespace BusinessLogic.Implementations
 
         public async Task<ServiceResponse> Save(ActivityViewModel activity)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityName), Value = activity.ActivityName });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityDepartment), Value = activity.ActivityDepartment });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivitySchoolYear), Value = activity.ActivitySchoolYear });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivitySchoolYearId), Value = activity.ActivitySchoolYearId });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityLevel), Value = activity.ActivityLevel });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityDate), Value = activity.ActivityDate });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivitySchoolTerm), Value = activity.ActivitySchoolTerm });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityNotes), Value = activity.ActivityNotes });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ParentId), Value = activity.ParentId });
+            var dalResponse = await _db.ExecuteNonQuery("SaveActivity",
+              _db.CreateListOfSqlParams(activity, new List<string>() { "ActivityId" }));
 
-            var result = await _db.ExecuteNonQuery("SaveActivity", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
 
         public async Task<ServiceResponse> Update(ActivityViewModel activity)
         {
-            var param = new List<SqlParameter>();
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityId), Value = activity.ActivityId });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityName), Value = activity.ActivityName });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityDepartment), Value = activity.ActivityDepartment });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivitySchoolYear), Value = activity.ActivitySchoolYear });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivitySchoolYearId), Value = activity.ActivitySchoolYearId });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityLevel), Value = activity.ActivityLevel });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityDate), Value = activity.ActivityDate });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivitySchoolTerm), Value = activity.ActivitySchoolTerm });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ActivityNotes), Value = activity.ActivityNotes });
-            param.Add(new SqlParameter { ParameterName = nameof(activity.ParentId), Value = activity.ParentId });
+            var dalResponse = await _db.ExecuteNonQuery("UpdateActivity",
+               _db.CreateListOfSqlParams(activity, new List<string>()));
 
-            var result = await _db.ExecuteNonQuery("UpdateActivity", param);
-            return new ServiceResponse(result);
+            return new ServiceResponse(dalResponse);
         }
     }
 }
