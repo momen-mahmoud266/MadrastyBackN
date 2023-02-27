@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class DepartmentsController : ControllerBase
     {
@@ -29,7 +29,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] DepartmentViewModel model)
+        public async Task<IActionResult> Save([FromBody] DepartmentViewModel model)
         {
             if(ModelState.IsValid)
             {

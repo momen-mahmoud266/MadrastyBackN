@@ -10,3 +10,15 @@ D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLo
 D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
 D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
 D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
+G:\New folder\New Structure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll
