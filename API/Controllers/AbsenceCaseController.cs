@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AbsenceCaseController : ControllerBase
     {
@@ -30,7 +30,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] AbsenceCaseViewModel model)
+        public async Task<IActionResult> Save([FromBody] AbsenceCaseViewModel model)
         {
             if (ModelState.IsValid)
             {

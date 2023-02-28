@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class BorrowedBookController : ControllerBase
     {
@@ -30,7 +30,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] BorrowedBookViewModel model)
+        public async Task<IActionResult> Save([FromBody] BorrowedBookViewModel model)
         {
             if (ModelState.IsValid)
             {

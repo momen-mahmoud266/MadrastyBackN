@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AbsencePermitEznController : ControllerBase
     {
@@ -44,7 +44,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] AbsencePermitEznViewModel model)
+        public async Task<IActionResult> Save([FromBody] AbsencePermitEznViewModel model)
         {
             if (ModelState.IsValid)
             {

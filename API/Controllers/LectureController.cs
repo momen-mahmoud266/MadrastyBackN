@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class LectureController : Controller
     {
@@ -29,7 +29,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] LectureViewModel model)
+        public async Task<IActionResult> Save([FromBody] LectureViewModel model)
         {
             if (ModelState.IsValid)
             {

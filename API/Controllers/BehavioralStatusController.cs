@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class BehavioralStatusController : ControllerBase
     {
@@ -30,7 +30,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] BehavioralStatusViewModel model)
+        public async Task<IActionResult> Save([FromBody] BehavioralStatusViewModel model)
         {
             if (ModelState.IsValid)
             {
