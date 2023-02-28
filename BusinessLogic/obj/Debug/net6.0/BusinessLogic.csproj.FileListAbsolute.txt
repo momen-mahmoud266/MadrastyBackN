@@ -18,3 +18,7 @@ F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\
 F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
 F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
 F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll
