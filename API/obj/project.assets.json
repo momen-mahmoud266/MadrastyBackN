@@ -2735,25 +2735,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ali\\.nuget\\packages\\": {}
+    "C:\\Users\\Mo'men\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\New folder\\New Structure\\MadrastyBackN\\API\\API.csproj",
+      "projectUniqueName": "F:\\TechCastle\\my school new\\Madrasty Back\\MadrastyBackN\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "G:\\New folder\\New Structure\\MadrastyBackN\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\ali\\.nuget\\packages\\",
-      "outputPath": "G:\\New folder\\New Structure\\MadrastyBackN\\API\\obj\\",
+      "projectPath": "F:\\TechCastle\\my school new\\Madrasty Back\\MadrastyBackN\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Mo'men\\.nuget\\packages\\",
+      "outputPath": "F:\\TechCastle\\my school new\\Madrasty Back\\MadrastyBackN\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mo'men\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -2761,8 +2763,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "G:\\New folder\\New Structure\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj"
+            "F:\\TechCastle\\my school new\\Madrasty Back\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "F:\\TechCastle\\my school new\\Madrasty Back\\MadrastyBackN\\BusinessLogic\\BusinessLogic.csproj"
             }
           }
         }
@@ -2801,7 +2803,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,3 +10,11 @@ D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLo
 D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
 D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
 D:\Madrasty\NewStructure\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb

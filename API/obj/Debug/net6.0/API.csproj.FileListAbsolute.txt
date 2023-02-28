@@ -50,3 +50,13 @@ D:\Madrasty\NewStructure\MadrastyBackN\API\obj\Debug\net6.0\refint\API.dll
 D:\Madrasty\NewStructure\MadrastyBackN\API\obj\Debug\net6.0\API.pdb
 D:\Madrasty\NewStructure\MadrastyBackN\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 D:\Madrasty\NewStructure\MadrastyBackN\API\obj\Debug\net6.0\ref\API.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.AssemblyInfo.cs
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\refint\API.dll
+F:\TechCastle\my school new\Madrasty Back\MadrastyBackN\API\obj\Debug\net6.0\API.pdb
