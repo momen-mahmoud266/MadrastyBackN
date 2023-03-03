@@ -20,7 +20,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteMaintenance(int maintenanceId)
+        public async Task<ServiceResponse> Delete(int maintenanceId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(maintenanceId), maintenanceId.ToString());
@@ -29,13 +29,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetMaintenance()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetMaintenance");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetMaintenanceById(int maintenanceId)
+        public async Task<ServiceResponse> GetById(int maintenanceId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(maintenanceId), maintenanceId.ToString());
@@ -44,7 +44,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveMaintenance(MaintenanceViewModel maintenance)
+        public async Task<ServiceResponse> Save(MaintenanceViewModel maintenance)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveMaintenance",
                _db.CreateListOfSqlParams(maintenance, new List<string>() { "MaintId" }));
@@ -52,17 +52,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateMaintenance(MaintenanceViewModel maintenance)
+        public async Task<ServiceResponse> Update(MaintenanceViewModel maintenance)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateMaintenance",
                _db.CreateListOfSqlParams(maintenance, new List<string>()));
 
             return new ServiceResponse(dalResponse);
         }
-        public async Task<ServiceResponse> GetMaintenanceStat()
-        {
-            var dalResponse = await _db.ExecuteQuery("GetMaintenanceStat");
-            return new ServiceResponse(dalResponse);
-        }
+
     }
 }

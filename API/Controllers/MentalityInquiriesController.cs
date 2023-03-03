@@ -18,41 +18,41 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMentalityInquiries()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetMentalityInquiries());
+            return Ok(await _service.Get());
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetByMentalityInquiriesId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetMentalityInquiriesById(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveMentalityInquiries([FromBody] MentalityInquiriesViewModel model)
+        public async Task<IActionResult> Save([FromBody] MentalityInquiriesViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveMentalityInquiries(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateMentalityInquiries([FromBody] MentalityInquiriesViewModel model)
+        public async Task<IActionResult> Update([FromBody] MentalityInquiriesViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateMentalityInquiries(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteMentalityInquiries(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteMentalityInquiries(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }

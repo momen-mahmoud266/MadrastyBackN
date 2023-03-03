@@ -19,41 +19,41 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMonthValue()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetMonthValue());
+            return Ok(await _service.Get());
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetByMonthValueId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetMonthValueWithId(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveMonthValue([FromBody] MonthValueViewModel model)
+        public async Task<IActionResult> Save([FromBody] MonthValueViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveMonthValue(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateMonthValue([FromBody] MonthValueViewModel model)
+        public async Task<IActionResult> Update([FromBody] MonthValueViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateMonthValue(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteMonthValue(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteFromMonthValue(id));
+            return Ok(await _service.Delete(id));
         }
         [HttpGet]
         public async Task<IActionResult> UpdateMonthValueState(int id, int state)

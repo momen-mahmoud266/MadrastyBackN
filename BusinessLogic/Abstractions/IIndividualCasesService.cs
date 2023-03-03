@@ -10,10 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IIndividualCasesService
     {
-        Task<ServiceResponse> GetIndividualCases();
-        Task<ServiceResponse> GetByIndividualCasesId(int individualCasesId);
-        Task<ServiceResponse> DeleteIndividualCases(int individualCasesId);
-        Task<ServiceResponse> SaveIndividualCases(IndividualCasesViewModel individualCases);
-        Task<ServiceResponse> UpdateIndividualCases(IndividualCasesViewModel individualCases);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int individualCasesId);
+        Task<ServiceResponse> Delete(int individualCasesId);
+        Task<ServiceResponse> Save(IndividualCasesViewModel individualCases);
+        Task<ServiceResponse> Update(IndividualCasesViewModel individualCases);
     }
 }

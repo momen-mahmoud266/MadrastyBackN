@@ -10,10 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IInstructionsService
     {
-        Task<ServiceResponse> GetInstructions();
-        Task<ServiceResponse> GetInstructionsById(int instructionsId);
-        Task<ServiceResponse> DeleteInstructions(int instructionsId);
-        Task<ServiceResponse> SaveInstructions(InstructionsViewModel instructions);
-        Task<ServiceResponse> UpdateInstructions(InstructionsViewModel instructions);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int instructionsId);
+        Task<ServiceResponse> Delete(int instructionsId);
+        Task<ServiceResponse> Save(InstructionsViewModel instructions);
+        Task<ServiceResponse> Update(InstructionsViewModel instructions);
     }
 }

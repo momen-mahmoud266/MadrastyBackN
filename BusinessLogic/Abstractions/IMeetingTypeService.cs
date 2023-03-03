@@ -10,10 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IMeetingTypeService
     {
-        Task<ServiceResponse> GetMeetingType();
-        Task<ServiceResponse> GetMeetingTypeById(int meetingTypeId);
-        Task<ServiceResponse> DeleteMeetingType(int meetingTypeId);
-        Task<ServiceResponse> SaveMeetingType(MeetingTypeViewModel meetingType);
-        Task<ServiceResponse> UpdateMeetingType(MeetingTypeViewModel meetingType);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int meetingTypeId);
+        Task<ServiceResponse> Delete(int meetingTypeId);
+        Task<ServiceResponse> Save(MeetingTypeViewModel meetingType);
+        Task<ServiceResponse> Update(MeetingTypeViewModel meetingType);
     }
 }

@@ -19,7 +19,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteIndividualCases(int individualCasesId)
+        public async Task<ServiceResponse> Delete(int individualCasesId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(individualCasesId), individualCasesId.ToString());
@@ -28,13 +28,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetIndividualCases()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetIndividualCases");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetByIndividualCasesId(int individualCasesId)
+        public async Task<ServiceResponse> GetById(int individualCasesId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(individualCasesId), individualCasesId.ToString());
@@ -43,7 +43,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveIndividualCases(IndividualCasesViewModel individualCases)
+        public async Task<ServiceResponse> Save(IndividualCasesViewModel individualCases)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveIndividualCases",
               _db.CreateListOfSqlParams(individualCases, new List<string>() { "Id" }));
@@ -51,7 +51,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateIndividualCases(IndividualCasesViewModel individualCases)
+        public async Task<ServiceResponse> Update(IndividualCasesViewModel individualCases)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateIndividualCases",
                _db.CreateListOfSqlParams(individualCases, new List<string>()));

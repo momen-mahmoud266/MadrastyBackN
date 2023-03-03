@@ -25,14 +25,14 @@ namespace BusinessLogic.Implementations
             var dalResponse = await _db.ExecuteQuery("Getinbox", pars);
             return new ServiceResponse(dalResponse);
         }
-        public async Task<ServiceResponse> GetmessageWithId(int msgId)
+        public async Task<ServiceResponse> GetById(int msgId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(msgId), msgId.ToString()); 
-            var dalResponse = await _db.ExecuteQuery("GetmessageWithId", pars);
+            var dalResponse = await _db.ExecuteQuery("GetById", pars);
             return new ServiceResponse(dalResponse);
         }
-        public async Task<ServiceResponse> SaveMessages(MessagesViewModel messages)
+        public async Task<ServiceResponse> Save(MessagesViewModel messages)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveLevels",
                           _db.CreateListOfSqlParams(messages, new List<string>() { "MsgId", "Date","Time", "ToEmpId", "Files", "Type", "Route", "ObjectId" }));

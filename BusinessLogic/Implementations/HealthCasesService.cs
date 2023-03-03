@@ -19,7 +19,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteHealthCases(int healthCasesId)
+        public async Task<ServiceResponse> Delete(int healthCasesId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(healthCasesId), healthCasesId.ToString());
@@ -28,13 +28,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetHealthCases()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetHealthCases");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetHealthCasesWithId(int healthCasesId)
+        public async Task<ServiceResponse> GetById(int healthCasesId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(healthCasesId), healthCasesId.ToString());
@@ -43,7 +43,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveHealthCases(HealthCasesViewModel healthCases)
+        public async Task<ServiceResponse> Save(HealthCasesViewModel healthCases)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveHealthCases",
                _db.CreateListOfSqlParams(healthCases, new List<string>() { "HealthId", "HealthDetId", "OtherSituations", "Date" , "EffortResults", "EndYearState" }));
@@ -51,7 +51,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateHealthCases(HealthCasesViewModel healthCases)
+        public async Task<ServiceResponse> Update(HealthCasesViewModel healthCases)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateHealthCases",
                _db.CreateListOfSqlParams(healthCases, new List<string>() { "HealthDetId", "OtherSituations", "Date", "EffortResults", "EndYearState" }));

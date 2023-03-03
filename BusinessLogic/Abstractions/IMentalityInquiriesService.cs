@@ -10,10 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IMentalityInquiriesService
     {
-        Task<ServiceResponse> GetMentalityInquiries();
-        Task<ServiceResponse> GetMentalityInquiriesById(int mentalityInquiriesId);
-        Task<ServiceResponse> DeleteMentalityInquiries(int mentalityInquiriesId);
-        Task<ServiceResponse> SaveMentalityInquiries(MentalityInquiriesViewModel mentalityInquiries);
-        Task<ServiceResponse> UpdateMentalityInquiries(MentalityInquiriesViewModel mentalityInquiries);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int mentalityInquiriesId);
+        Task<ServiceResponse> Delete(int mentalityInquiriesId);
+        Task<ServiceResponse> Save(MentalityInquiriesViewModel mentalityInquiries);
+        Task<ServiceResponse> Update(MentalityInquiriesViewModel mentalityInquiries);
     }
 }

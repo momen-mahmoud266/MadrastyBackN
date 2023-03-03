@@ -18,41 +18,41 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetIndividualCases()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetIndividualCases());
+            return Ok(await _service.Get());
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetByIndividualCasesId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetByIndividualCasesId(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveIndividualCases([FromBody] IndividualCasesViewModel model)
+        public async Task<IActionResult> Save([FromBody] IndividualCasesViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveIndividualCases(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateIndividualCases([FromBody] IndividualCasesViewModel model)
+        public async Task<IActionResult> Update([FromBody] IndividualCasesViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateIndividualCases(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteIndividualCases(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteIndividualCases(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }

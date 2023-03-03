@@ -25,18 +25,18 @@ namespace API.Controllers
             return Ok(await _service.GetInbox(id));
         }
         [HttpGet]
-        public async Task<IActionResult> GetMessageWithId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetMessageWithId(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveMessages([FromBody] MessagesViewModel model)
+        public async Task<IActionResult> Save([FromBody] MessagesViewModel model)
         {
            
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveMessages(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }

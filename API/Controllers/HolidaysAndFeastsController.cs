@@ -18,41 +18,41 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetHolidaysAndFeasts()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetHolidaysAndFeasts());
+            return Ok(await _service.Get());
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetHolidaysAndFeastsById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetHolidaysAndFeastsById(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveHolidaysAndFeasts([FromBody] HolidaysAndFeastsViewModel model)
+        public async Task<IActionResult> Save([FromBody] HolidaysAndFeastsViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveHolidaysAndFeasts(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateHolidaysAndFeasts([FromBody] HolidaysAndFeastsViewModel model)
+        public async Task<IActionResult> Update([FromBody] HolidaysAndFeastsViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateHolidaysAndFeasts(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteHolidaysAndFeasts(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteHolidaysAndFeasts(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }

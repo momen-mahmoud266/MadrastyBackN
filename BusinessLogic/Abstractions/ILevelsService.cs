@@ -10,11 +10,11 @@ namespace BusinessLogic.Abstractions
 {
     public interface ILevelsService
     {
-        Task<ServiceResponse> GetLevels();
-        Task<ServiceResponse> GetLevelsById(int levelId);
-        Task<ServiceResponse> DeleteLevels(int levelId);
-        Task<ServiceResponse> SaveLevels(LevelsViewModel level);
-        Task<ServiceResponse> UpdateLevels(LevelsViewModel level);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int levelId);
+        Task<ServiceResponse> Delete(int levelId);
+        Task<ServiceResponse> Save(LevelsViewModel level);
+        Task<ServiceResponse> Update(LevelsViewModel level);
         Task<ServiceResponse> GetLevelsStat();
     }
 }

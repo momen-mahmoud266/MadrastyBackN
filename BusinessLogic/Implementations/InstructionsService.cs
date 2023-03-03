@@ -20,7 +20,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteInstructions(int instructionsId)
+        public async Task<ServiceResponse> Delete(int instructionsId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(instructionsId), instructionsId.ToString());
@@ -29,13 +29,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetInstructions()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetInstructions");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetInstructionsById(int instructionsId)
+        public async Task<ServiceResponse> GetById(int instructionsId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(instructionsId), instructionsId.ToString());
@@ -44,7 +44,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveInstructions(InstructionsViewModel instructions)
+        public async Task<ServiceResponse> Save(InstructionsViewModel instructions)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveInstructions",
                _db.CreateListOfSqlParams(instructions, new List<string>() { "Ser" }));
@@ -52,7 +52,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateInstructions(InstructionsViewModel instructions)
+        public async Task<ServiceResponse> Update(InstructionsViewModel instructions)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateInstructions",
                _db.CreateListOfSqlParams(instructions, new List<string>()));

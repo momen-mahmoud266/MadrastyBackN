@@ -17,11 +17,11 @@ namespace API.Controllers
             _service = service;
         }
         [HttpPost]
-        public async Task<IActionResult> SaveHealthCases([FromBody] HealthCasesViewModel model)
+        public async Task<IActionResult> Save([FromBody] HealthCasesViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveHealthCases(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
@@ -35,9 +35,9 @@ namespace API.Controllers
             return Ok(new ServiceResponse("Validation Error"));
         }
         [HttpGet]
-        public async Task<IActionResult> GetHealthCases()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetHealthCases());
+            return Ok(await _service.Get());
         }
         [HttpGet]
         public async Task<IActionResult> GetHealthCasesDetails()
@@ -58,17 +58,17 @@ namespace API.Controllers
             return Ok(result);
         }
         [HttpGet]
-        public async Task<IActionResult> GetHealthCasesWithId(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var result = await _service.GetHealthCasesWithId(id);
+            var result = await _service.GetById(id);
             return Ok(result);
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateHealthCases([FromBody] HealthCasesViewModel model)
+        public async Task<IActionResult> Update([FromBody] HealthCasesViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateHealthCases(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
@@ -81,9 +81,9 @@ namespace API.Controllers
 
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteHealthCases(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var result = await _service.DeleteHealthCases(id);
+            var result = await _service.Delete(id);
 
             return Ok(result);
         }

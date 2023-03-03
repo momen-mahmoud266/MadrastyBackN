@@ -10,11 +10,11 @@ namespace BusinessLogic.Abstractions
 {
     public interface IMonthValueService
     {
-        Task<ServiceResponse> GetMonthValue();
-        Task<ServiceResponse> GetMonthValueWithId(int id);
-        Task<ServiceResponse> SaveMonthValue(MonthValueViewModel monthValue);
-        Task<ServiceResponse> UpdateMonthValue(MonthValueViewModel nonthValue);
-        Task<ServiceResponse> DeleteFromMonthValue(int id);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int id);
+        Task<ServiceResponse> Save(MonthValueViewModel monthValue);
+        Task<ServiceResponse> Update(MonthValueViewModel nonthValue);
+        Task<ServiceResponse> Delete(int id);
         Task<ServiceResponse> UpdateMonthValueState(int id, int state);
         Task<ServiceResponse> GetMonthValueForDashboard();
     }

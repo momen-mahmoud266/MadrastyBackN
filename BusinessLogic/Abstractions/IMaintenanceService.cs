@@ -10,10 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IMaintenanceService
     {
-        Task<ServiceResponse> GetMaintenance();
-        Task<ServiceResponse> GetMaintenanceById(int maintenanceId);
-        Task<ServiceResponse> DeleteMaintenance(int maintenanceId);
-        Task<ServiceResponse> SaveMaintenance(MaintenanceViewModel maintenance);
-        Task<ServiceResponse> UpdateMaintenance(MaintenanceViewModel maintenance);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int maintenanceId);
+        Task<ServiceResponse> Delete(int maintenanceId);
+        Task<ServiceResponse> Save(MaintenanceViewModel maintenance);
+        Task<ServiceResponse> Update(MaintenanceViewModel maintenance);
     }
 }

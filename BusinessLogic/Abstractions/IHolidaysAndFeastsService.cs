@@ -10,10 +10,10 @@ namespace BusinessLogic.Abstractions
 {
     public interface IHolidaysAndFeastsService
     {
-        Task<ServiceResponse> GetHolidaysAndFeasts();
-        Task<ServiceResponse> GetHolidaysAndFeastsById(int holidaysAndFeastsId);
-        Task<ServiceResponse> DeleteHolidaysAndFeasts(int holidaysAndFeastsId);
-        Task<ServiceResponse> SaveHolidaysAndFeasts(HolidaysAndFeastsViewModel holidaysAndFeasts);
-        Task<ServiceResponse> UpdateHolidaysAndFeasts(HolidaysAndFeastsViewModel holidaysAndFeasts);
+        Task<ServiceResponse> Get();
+        Task<ServiceResponse> GetById(int holidaysAndFeastsId);
+        Task<ServiceResponse> Delete(int holidaysAndFeastsId);
+        Task<ServiceResponse> Save(HolidaysAndFeastsViewModel holidaysAndFeasts);
+        Task<ServiceResponse> Update(HolidaysAndFeastsViewModel holidaysAndFeasts);
     }
 }

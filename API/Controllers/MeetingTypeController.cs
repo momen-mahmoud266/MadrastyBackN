@@ -18,41 +18,41 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMeetingType()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetMeetingType());
+            return Ok(await _service.Get());
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMeetingTypeById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetMeetingTypeById(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveMeetingType([FromBody] MeetingTypeViewModel model)
+        public async Task<IActionResult> Save([FromBody] MeetingTypeViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveMeetingType(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateMeetingType([FromBody] MeetingTypeViewModel model)
+        public async Task<IActionResult> Update([FromBody] MeetingTypeViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateMeetingType(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteMeetingType(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteMeetingType(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }

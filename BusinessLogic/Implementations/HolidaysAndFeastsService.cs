@@ -19,7 +19,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteHolidaysAndFeasts(int holidaysAndFeastsId)
+        public async Task<ServiceResponse> Delete(int holidaysAndFeastsId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(holidaysAndFeastsId), holidaysAndFeastsId.ToString());
@@ -28,13 +28,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetHolidaysAndFeasts()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetHolidaysAndFeasts");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetHolidaysAndFeastsById(int holidaysAndFeastsId)
+        public async Task<ServiceResponse> GetById(int holidaysAndFeastsId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(holidaysAndFeastsId), holidaysAndFeastsId.ToString());
@@ -43,7 +43,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveHolidaysAndFeasts(HolidaysAndFeastsViewModel holidaysAndFeasts)
+        public async Task<ServiceResponse> Save(HolidaysAndFeastsViewModel holidaysAndFeasts)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveHolidaysAndFeasts",
                _db.CreateListOfSqlParams(holidaysAndFeasts, new List<string>() { "Id" }));
@@ -51,17 +51,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateHolidaysAndFeasts(HolidaysAndFeastsViewModel holidaysAndFeasts)
+        public async Task<ServiceResponse> Update(HolidaysAndFeastsViewModel holidaysAndFeasts)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateHolidaysAndFeasts",
                _db.CreateListOfSqlParams(holidaysAndFeasts, new List<string>()));
 
             return new ServiceResponse(dalResponse);
         }
-        public async Task<ServiceResponse> GetHolidaysAndFeastsStat()
-        {
-            var dalResponse = await _db.ExecuteQuery("GetHolidaysAndFeastsStat");
-            return new ServiceResponse(dalResponse);
-        }
+
     }
 }

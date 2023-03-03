@@ -19,7 +19,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteFromMonthValue(int monthValueId)
+        public async Task<ServiceResponse> Delete(int monthValueId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(monthValueId), monthValueId.ToString());
@@ -28,13 +28,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetMonthValue()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetMonthValue");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetMonthValueWithId(int monthValueId)
+        public async Task<ServiceResponse> GetById(int monthValueId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(monthValueId), monthValueId.ToString());
@@ -43,7 +43,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveMonthValue(MonthValueViewModel monthValue)
+        public async Task<ServiceResponse> Save(MonthValueViewModel monthValue)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveMonthValue",
                _db.CreateListOfSqlParams(monthValue, new List<string>() { "Ser" }));
@@ -51,7 +51,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateMonthValue(MonthValueViewModel monthValue)
+        public async Task<ServiceResponse> Update(MonthValueViewModel monthValue)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateMonthValue",
                _db.CreateListOfSqlParams(monthValue, new List<string>()));

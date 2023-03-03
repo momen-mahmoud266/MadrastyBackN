@@ -20,7 +20,7 @@ namespace BusinessLogic.Implementations
             _db = db;
         }
 
-        public async Task<ServiceResponse> DeleteMeetingType(int meetingTypeId)
+        public async Task<ServiceResponse> Delete(int meetingTypeId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(meetingTypeId), meetingTypeId.ToString());
@@ -29,13 +29,13 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetMeetingType()
+        public async Task<ServiceResponse> Get()
         {
             var dalResponse = await _db.ExecuteQuery("GetMeetingType");
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> GetMeetingTypeById(int meetingTypeId)
+        public async Task<ServiceResponse> GetById(int meetingTypeId)
         {
             var pars = new Dictionary<string, string>();
             pars.Add(nameof(meetingTypeId), meetingTypeId.ToString());
@@ -44,7 +44,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> SaveMeetingType(MeetingTypeViewModel meetingType)
+        public async Task<ServiceResponse> Save(MeetingTypeViewModel meetingType)
         {
             var dalResponse = await _db.ExecuteNonQuery("SaveMeetingType",
                _db.CreateListOfSqlParams(meetingType, new List<string>() { "MeetingTypeId" }));
@@ -52,7 +52,7 @@ namespace BusinessLogic.Implementations
             return new ServiceResponse(dalResponse);
         }
 
-        public async Task<ServiceResponse> UpdateMeetingType(MeetingTypeViewModel meetingType)
+        public async Task<ServiceResponse> Update(MeetingTypeViewModel meetingType)
         {
             var dalResponse = await _db.ExecuteNonQuery("UpdateMeetingType",
                _db.CreateListOfSqlParams(meetingType, new List<string>()));

@@ -18,41 +18,41 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMaintenance()
+        public async Task<IActionResult> Get()
         {
-            return Ok(await _service.GetMaintenance());
+            return Ok(await _service.Get());
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMaintenanceById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            return Ok(await _service.GetMaintenanceById(id));
+            return Ok(await _service.GetById(id));
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveMaintenance([FromBody] MaintenanceViewModel model)
+        public async Task<IActionResult> Save([FromBody] MaintenanceViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.SaveMaintenance(model));
+                return Ok(await _service.Save(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateMaintenance([FromBody] MaintenanceViewModel model)
+        public async Task<IActionResult> Update([FromBody] MaintenanceViewModel model)
         {
             if (ModelState.IsValid)
             {
-                return Ok(await _service.UpdateMaintenance(model));
+                return Ok(await _service.Update(model));
             }
             return Ok(new ServiceResponse("Validation Error"));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteMaintenance(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await _service.DeleteMaintenance(id));
+            return Ok(await _service.Delete(id));
         }
     }
 }
